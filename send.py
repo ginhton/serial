@@ -2,6 +2,9 @@ import serial
 import binascii
 import timeit
 from time import sleep
+
+loop = False
+
 t = serial.Serial('/dev/ttyUSB0', 115200)
 
 def Hex(command, n):
@@ -11,9 +14,9 @@ def Hex(command, n):
     data += t.read(t.inWaiting());
     return data
 
-# addr = '8a d9'
-# sendComm = 'fc 05 03 01 '+addr+' 00'
-sendComm = 'fc 05 03 01 8a d9 00'
+addr = '5d 8d'
+sendComm = 'fc 05 03 01 '+addr+' 00'
+# sendComm = 'fc 05 03 01 98 35 00'
 hex = bytes.fromhex(sendComm)
 
 
@@ -28,12 +31,14 @@ def P():
     sleep(1);
 
 
-# t = repeat('P()', 'from __main__ import P', number=3, repeat=4);
+# t = repeat('P()', 'from __main__ import P', number=3, repeat=1);
 # print(t);
+
 P();
-# while(True):
-#     P();
 
-# data = Hex('fe 09 10 46 16 dc 1b 00 4b 12 00 ff', 3)
+P();
 
-# print(str(binascii.b2a_hex(data)))
+P();
+
+P();
+
