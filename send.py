@@ -14,7 +14,7 @@ def Hex(command, n):
     data += t.read(t.inWaiting());
     return data
 
-addr = '5d 8d'
+addr = 'd9 af'
 sendComm = 'fc 05 03 01 '+addr+' 00'
 # sendComm = 'fc 05 03 01 98 35 00'
 hex = bytes.fromhex(sendComm)
@@ -28,7 +28,7 @@ def P():
     elapsed = timeit.default_timer() - t0
     print(data)
     print(elapsed);
-    sleep(1);
+    sleep(1.2);
 
 
 # t = repeat('P()', 'from __main__ import P', number=3, repeat=1);

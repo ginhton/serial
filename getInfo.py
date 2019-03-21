@@ -22,5 +22,6 @@ t = serial.Serial('/dev/ttyUSB0', 115200)
 
 # sample end node address
 # data = Hex('fe 09 10 46 16 dc 1b 00 4b 12 00 ff')
+data = Hex(commands[1])
 
 print(str(binascii.b2a_hex(data)))
