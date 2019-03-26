@@ -14,7 +14,7 @@ def Hex(command, n):
     data += t.read(t.inWaiting());
     return data
 
-addr = 'd9 af'
+addr = '3f 29'
 sendComm = 'fc 05 03 01 '+addr+' 00'
 # sendComm = 'fc 05 03 01 98 35 00'
 hex = bytes.fromhex(sendComm)
@@ -30,9 +30,6 @@ def P():
     print(elapsed);
     sleep(1.2);
 
-
-# t = repeat('P()', 'from __main__ import P', number=3, repeat=1);
-# print(t);
 
 P();
 
